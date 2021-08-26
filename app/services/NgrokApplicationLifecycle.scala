@@ -8,7 +8,6 @@ import play.api.Configuration
 
 import java.util.Objects.nonNull
 import javax.inject._
-import scala.concurrent.Future
 
 @Singleton
 class NgrokApplicationLifecycle @Inject()(config: Configuration, lifecycle: ApplicationLifecycle) {
@@ -35,9 +34,5 @@ class NgrokApplicationLifecycle @Inject()(config: Configuration, lifecycle: Appl
     val tunnel: Tunnel = ngrokClient.connect(createTunnel)
 
     println(s" * ngrok tunnel \"${tunnel.getPublicUrl}\" -> \"http://127.0.0.1:$port\"")
-  }
-
-  lifecycle.addStopHook { () =>
-    Future.successful(())
   }
 }
