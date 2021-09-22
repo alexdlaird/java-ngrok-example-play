@@ -1,5 +1,5 @@
-[![CI/CD](https://github.com/alexdlaird/java-ngrok-example-scala/workflows/CI/CD/badge.svg)](https://github.com/alexdlaird/java-ngrok-example-play/actions?query=workflow%3ACI%2FCD)
-![GitHub License](https://img.shields.io/github/license/alexdlaird/java-ngrok-example-scala)
+[![CI/CD](https://github.com/alexdlaird/java-ngrok-example-play/workflows/CI/CD/badge.svg)](https://github.com/alexdlaird/java-ngrok-example-play/actions?query=workflow%3ACI%2FCD)
+![GitHub License](https://img.shields.io/github/license/alexdlaird/java-ngrok-example-play)
 
 # java-ngrok Example - Play (Scala)
 
