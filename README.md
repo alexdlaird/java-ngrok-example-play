@@ -1,4 +1,4 @@
-[![CI/CD](https://github.com/alexdlaird/java-ngrok-example-play/workflows/CI/CD/badge.svg)](https://github.com/alexdlaird/java-ngrok-example-play/actions?query=workflow%3ACI%2FCD)
+[![Build](https://github.com/alexdlaird/java-ngrok-example-play/workflows/build.yml/badge.svg)](https://github.com/alexdlaird/java-ngrok-example-play/actions/workflows/build.yml)
 ![GitHub License](https://img.shields.io/github/license/alexdlaird/java-ngrok-example-play)
 
 # java-ngrok Example - Play (Scala)
