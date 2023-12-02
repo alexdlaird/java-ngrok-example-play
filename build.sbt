@@ -4,11 +4,11 @@ lazy val root = (project in file("."))
     name := """java-ngrok-example-play""",
     organization := "com.github.alexdlaird",
     version := "1.0.0-SNAPSHOT",
-    scalaVersion := "2.13.6",
+    scalaVersion := "2.13.12",
     libraryDependencies ++= Seq(
       guice,
-      "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test,
-      "com.github.alexdlaird" % "java-ngrok" % "2.1.0"
+      "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test,
+      "com.github.alexdlaird" % "java-ngrok" % "2.2.5"
     ),
     scalacOptions ++= Seq(
       "-feature",

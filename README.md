@@ -46,7 +46,7 @@ class NgrokApplicationLifecycle @Inject()(config: Configuration, lifecycle: Appl
       .build
     val tunnel: Tunnel = ngrokClient.connect(createTunnel)
 
-    println(s" * ngrok tunnel \"${tunnel.getPublicUrl}\" -> \"http://127.0.0.1:$port\"")
+    println(s" * ngrok tunnel \"${tunnel.getPublicUrl}\" -> \"http://localhost:$port\"")
   }
 }
 ```
