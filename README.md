@@ -26,13 +26,11 @@ If `ngrok.enabled` config flag is set, we want to initialize `java-ngrok` when P
 class NgrokApplicationLifecycle @Inject()(config: Configuration, lifecycle: ApplicationLifecycle) {
   private val environment: String = config.getOptional[String]("environment").getOrElse("production")
   private val ngrokEnabled: Boolean = config.getOptional[Boolean]("ngrok.enabled").getOrElse(false)
-  private val authToken: String = config.getOptional[String]("ngrok.authToken").orNull
   private val region: String = config.getOptional[String]("ngrok.region").orNull
 
   // java-ngrok will only be installed, and should only ever be initialized, in a dev environment
   if (environment.equals("dev") && ngrokEnabled) {
     val javaNgrokConfig: JavaNgrokConfig = new JavaNgrokConfig.Builder()
-      .withAuthToken(authToken)
       .withRegion(if (nonNull(region)) Region.valueOf(region.toUpperCase) else null)
       .build
     val ngrokClient: NgrokClient = new NgrokClient.Builder()
