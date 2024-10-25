@@ -1,7 +1,7 @@
 .PHONY: all build clean install test
 
 SHELL := /usr/bin/env bash
- 
+
 all: test
 
 build:
