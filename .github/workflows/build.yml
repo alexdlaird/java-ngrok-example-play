@@ -26,6 +26,7 @@ jobs:
         with:
           java-version: 11
           distribution: adopt
+      - uses: sbt/setup-sbt@v1
       - name: Build
         run: make build
       - name: Test
