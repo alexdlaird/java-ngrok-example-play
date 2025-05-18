@@ -19,7 +19,7 @@ class Module extends AbstractModule {
 ```
 
 Then create a [`NgrokApplicatinLifecycle` class](https://github.com/alexdlaird/java-ngrok-example-play/blob/main/app/services/NgrokApplicationLifecycle.scala).
-If `ngrok.enabled` config flag is set, we want to initialize `java-ngrok` when Play is booting in a `dev` environment.
+If `ngrok.enabled` config flag is set, `java-ngrok` will be initialized when Play is booting in a `dev` environment.
 
 ```scala
 @Singleton
@@ -44,8 +44,8 @@ class NgrokApplicationLifecycle @Inject()(config: Configuration, lifecycle: Appl
 }
 ```
 
-Pass parameters to our Play application through
-[our config file](https://github.com/alexdlaird/java-ngrok-example-play/blob/main/conf/application.conf) (including
+Pass parameters to your Play application through
+[your config file](https://github.com/alexdlaird/java-ngrok-example-play/blob/main/conf/application.conf) (including
 making `.ngrok.io` an allowed host):
 
 ```
