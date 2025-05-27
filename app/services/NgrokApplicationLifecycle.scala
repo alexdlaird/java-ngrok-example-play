@@ -19,7 +19,7 @@ class NgrokApplicationLifecycle @Inject()(config: Configuration, lifecycle: Appl
   private val environment: String = config.getOptional[String]("environment").getOrElse("production")
   private val ngrokEnabled: Boolean = config.getOptional[Boolean]("ngrok.enabled").getOrElse(false)
 
-  // java-ngrok will only be installed, and should only ever be initialized, in a dev environment
+  // Only install and initialize ngrok if we're actually using it
   if (environment.equals("dev") && ngrokEnabled) {
     val ngrokClient: NgrokClient = new NgrokClient.Builder()
       .build
