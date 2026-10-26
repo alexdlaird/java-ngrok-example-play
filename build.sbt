@@ -5,6 +5,7 @@ lazy val root = (project in file("."))
     organization := "com.github.alexdlaird",
     version := "1.0.0-SNAPSHOT",
     scalaVersion := "2.13.12",
+    Compile / packageBin / packageOptions += Package.ManifestAttributes("X-Muppets" -> "42"),
     libraryDependencies ++= Seq(
       guice,
       "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test,
