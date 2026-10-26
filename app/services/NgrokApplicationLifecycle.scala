@@ -13,6 +13,7 @@ import play.api.inject.ApplicationLifecycle
 import play.api.Configuration
 
 import javax.inject._
+import scala.concurrent.Future
 
 @Singleton
 class NgrokApplicationLifecycle @Inject()(config: Configuration, lifecycle: ApplicationLifecycle) {
@@ -32,5 +33,7 @@ class NgrokApplicationLifecycle @Inject()(config: Configuration, lifecycle: Appl
     val tunnel: Tunnel = ngrokClient.connect(createTunnel)
 
     println(s" * ngrok tunnel \"${tunnel.getPublicUrl}\" -> \"http://localhost:$port\"")
+
+    lifecycle.addStopHook(() => Future.successful(ngrokClient.kill()))
   }
 }
