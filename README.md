@@ -3,8 +3,8 @@
 
 # java-ngrok Example - Play (Scala)
 
-This is an example project that shows how to easily integrate [`java-ngrok`](https://github.com/alexdlaird/java-ngrok)
-with [Play](https://www.playframework.com/), as [summarized in the docs](https://alexdlaird.github.io/java-ngrok/integration/#play-scala).
+This is an example project that shows how to easily integrate [`java-ngrok`](https://java-ngrok.alexlaird.com/)
+with [Play](https://www.playframework.com/), as [summarized in the docs](https://java-ngrok.alexlaird.com/integration/#play-scala).
 
 ## Running
 
